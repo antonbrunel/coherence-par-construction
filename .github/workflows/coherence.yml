@@ -1,0 +1,25 @@
+# Les contrôles tournent à chaque poussée, et l'épreuve vérifie qu'ils gardent encore.
+# Un contrôle qui n'est pas branché sur quelque chose qui bloque n'existe pas.
+name: coherence
+on:
+  push:
+  pull_request:
+jobs:
+  controler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Les quatre contrôles
+        run: node check.mjs
+      - name: L'épreuve des garde-fous
+        run: node epreuve.mjs
+      - name: Le générateur est idempotent
+        run: |
+          node exemple/build.mjs
+          git diff --exit-code -- exemple/ || {
+            echo "Le générateur ne reproduit pas les pages commitées."
+            exit 1
+          }

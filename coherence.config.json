@@ -1,0 +1,39 @@
+{
+  "_doc": "Tout ce qui est propre à un site vit ici, et nulle part dans le code des contrôles. Pour brancher les contrôles sur ton site : change « racine » et les chemins ci-dessous. Une section absente désactive son contrôle.",
+
+  "racine": "exemple",
+
+  "palette": {
+    "_doc": "La charte fait foi. Aucune couleur n'est écrite dans le code du contrôle.",
+    "charte": "DESIGN.md",
+    "sectionCouleurs": "Palette",
+    "sectionFontes": "Typographie",
+    "feuilles": ["style.css"],
+    "pages": ["index.html", "en/index.html"],
+    "fontesGeneriques": ["serif", "sans-serif", "monospace", "system-ui", "georgia", "inter", "iowan old style"]
+  },
+
+  "faits": {
+    "_doc": "Source unique des chiffres. Chaque fait déclare les fichiers où il doit apparaître.",
+    "source": "data/facts.json"
+  },
+
+  "deploiement": {
+    "_doc": "Fail-closed : un fichier requis manquant ou vide bloque, une incohérence canonical/sitemap/robots bloque.",
+    "requis": [
+      "index.html", "en/index.html", "style.css", "llms.txt",
+      "robots.txt", "sitemap.xml", "data/facts.json",
+      "data/i18n/fr.json", "data/i18n/en.json"
+    ],
+    "page": "index.html",
+    "sitemap": "sitemap.xml",
+    "robots": "robots.txt"
+  },
+
+  "langues": {
+    "_doc": "Le générateur est la seule façon d'écrire les pages. Le contrôle l'appelle et compare au disque.",
+    "generateur": "build.mjs",
+    "dictionnaires": "data/i18n/{langue}.json",
+    "sitemap": "sitemap.xml"
+  }
+}

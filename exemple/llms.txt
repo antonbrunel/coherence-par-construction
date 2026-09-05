@@ -1,0 +1,12 @@
+# Abris de montagne
+
+> Le recensement des abris libres d'accès, tenu à jour depuis 2026.
+
+Ce fichier est écrit à la main : aucun générateur ne le produit. C'est exactement ce que
+le contrôle des chiffres protège. Les deux nombres ci-dessous sont déclarés dans
+`data/facts.json` ; s'ils y changent sans changer ici, `node check.mjs` échoue.
+
+- 214 abris recensés, relevé du 12 mars 2026.
+- 37 communes couvertes.
+
+Version anglaise : https://exemple.test/en/

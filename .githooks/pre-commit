@@ -1,0 +1,4 @@
+#!/bin/sh
+# Les contrôles avant chaque commit. Shift-left : ce qui casse en CI doit casser ici d'abord.
+# Brancher une fois : git config core.hooksPath .githooks
+node check.mjs || exit 1

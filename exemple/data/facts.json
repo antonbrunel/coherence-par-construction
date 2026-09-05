@@ -1,0 +1,17 @@
+{
+  "_doc": "Source unique des chiffres. Chaque fait déclare où il doit apparaître (presence). Les pages sont générées depuis ce fichier, mais llms.txt est tenu à la main : c'est là que le contrôle sert vraiment. Changer 214 ici sans toucher llms.txt fait échouer `node check.mjs`.",
+  "faits": [
+    {
+      "cle": "abris",
+      "valeur": "214",
+      "libelle": "abris recensés (relevé du 12 mars 2026)",
+      "presence": ["index.html", "en/index.html", "llms.txt"]
+    },
+    {
+      "cle": "communes",
+      "valeur": "37",
+      "libelle": "communes couvertes (relevé du 12 mars 2026)",
+      "presence": ["index.html", "en/index.html", "llms.txt"]
+    }
+  ]
+}

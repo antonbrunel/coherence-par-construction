@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{langue}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{titre}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:title" content="{{titre}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:image" content="https://exemple.test/apercu.png">
+<meta name="twitter:card" content="summary_large_image">
+{{alternates}}
+<link rel="stylesheet" href="{{racine}}style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"{{titre}}","url":"{{canonical}}"}</script>
+</head>
+<body>
+<main>
+<h1>{{titre}}</h1>
+<p>{{intro}}</p>
+<p><span class="chiffre">{{abris}}</span> {{abris_libelle}}, <span class="chiffre">{{communes}}</span> {{communes_libelle}}.</p>
+<footer>{{pied}}</footer>
+</main>
+</body>
+</html>
